@@ -127,8 +127,8 @@ const certificates = [
       title: "SQL Certification Course",
       issuer: "Intellipath",
       date: "March 2025",
-      thumbnail: "../certificates/sqlintellipath.jpg",
-      fullImage: "../certificates/sqlintellipath.jpg",
+      thumbnail: "sqlintellipath.jpg",
+      fullImage: "sqlintellipath.jpg",
       credentialUrl: "https://intellipaat.com/academy/certificate-link/?Yz02MTkmdT0yMzEyNjAmZXh0PTE="
   },
   {
@@ -136,8 +136,8 @@ const certificates = [
       title: "CSS Basic Certification",
       issuer: "HackerRank",
       date: "April 2025",
-      thumbnail: "../certificates/cssbasic.png",
-      fullImage: "../certificates/cssbasic.png",
+      thumbnail: "cssbasic.png",
+      fullImage: "cssbasic.png",
       credentialUrl: "https://www.hackerrank.com/certificates/549ef51c2ce1"
   },
   {
@@ -145,8 +145,8 @@ const certificates = [
       title: "SQL Basic Certification",
       issuer: "HackerRank",
       date: "March 2025",
-      thumbnail: "../certificates/sql.jpg",
-      fullImage: "../certificates/sql.jpg",
+      thumbnail: "sql.jpg",
+      fullImage: "sql.jpg",
       credentialUrl: "https://example.com/credential/24680"
   },
   {
@@ -154,8 +154,8 @@ const certificates = [
       title: "Figma Masterclass",
       issuer: "Physics Wallah",
       date: "June 2025",
-      thumbnail: "../certificates/figma.jpg",
-      fullImage: "../certificates/figma.jpg",
+      thumbnail: "figma.jpg",
+      fullImage: "figma.jpg",
       credentialUrl: "https://pwskills.com/learn/certificate/3a344db1-a6f1-46cf-a4dd-cf3df4d8df19/"
   }
 ];
