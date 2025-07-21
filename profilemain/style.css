@@ -251,6 +251,13 @@ nav{
 .featured-text-btn .btn:hover{
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4); 
     color:#09225e
+    text-decoration: none;
+}
+
+.featured-text-btn .btn a{
+    text-decoration: none;
+    color: rgb(113, 113, 116);
+    font-weight: 600;
 }
 
 .social_icons{
