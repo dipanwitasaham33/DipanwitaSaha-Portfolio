@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+    <link rel="shortcut icon" href="icon2.png" type="image/x-icon">
+
+    <title> Dipanwita Saha | Portfolio </title>
+    <style>
+        /* Basic Reset */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(to top, #2f2f9b, #1E90FF);
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            transition: background 1s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        /* Animated Background Text */
+        .background-text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2; /* Behind the arrow */
+            pointer-events: none;
+            opacity: 0;
+            animation: fadeInBackgroundText 8s ease-in-out forwards; /* Increased duration */
+            text-align: center;
+            width: 100%; /* Span across the screen */
+        }
+
+        @keyframes fadeInBackgroundText {
+            50% { opacity: 0.7; } /* Adjust opacity for visibility */
+            100% { opacity: 0.7; }
+        }
+
+        .background-text {
+            font-size: 3rem; /* Increased overall text size */
+            font-weight: bold;
+            color: rgb(184, 143, 10); /* Base golden color */
+             text-shadow:
+                0 0 8px rgba(242, 211, 38, 0.8), /* Stronger glow */
+                2px 2px 5px red;
+            background: linear-gradient(to right, #ffd700, #f0e68c); 
+            -webkit-background-clip: text;
+            color: transparent; /* Hide the solid color to show the gradient */
+        }
+
+        .background-text .sanskrit {
+          display: block;
+    margin-bottom: 0.5em;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: transparent; /* Start with transparent to show background or strokes */
+    background: linear-gradient(to right, #FFD700, #FFA500); /* Gold to Orange gradient */
+    -webkit-background-clip: text;
+    text-shadow:
+        2px 2px 0 #000000, /* Black outline (base) */
+        4px 4px 0 #8B0000, /* Dark Red shadow */
+        6px 6px 0 #008000; /* Green shadow */
+    /* -webkit-text-stroke: 1px #000; Additional black outline for webkit */
+    /* text-stroke: 1px #000; Standard property for text outline */
+        }
+
+        .background-text .english {
+            font-style: italic;
+            font-size: 2.8rem; /* Increased English size */
+            text-shadow: 2px 2px 5px rgb(253, 252, 252); /* Red shadow for English */
+            /* font-weight: 700;  */
+            font-weight: bold;
+            color: #fbfbfb; /* Tomato - a vibrant color, choose your preferred bold color */
+            text-shadow: 1px 1px 0 #000000, 
+                2px 2px 0 #8B0000, 
+                4px 4px 0 #008000;  
+               
+
+          }
+
+        /* Arrow Animation */
+        .arrow-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: moveUp 10s ease-in-out forwards; /* Increased duration */
+            z-index: 1; /* On top of background text */
+            pointer-events: none;
+        }
+
+        @keyframes moveUp {
+            0% { transform: translate(-50%, 50%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translate(-50%, -250%); opacity: 0; }
+        }
+
+        /* Arrow Styling */
+        .arrow {
+            width: 30px; /* Made the arrow narrower */
+            height: 200px;
+            position: relative;
+        }
+
+        .arrow-head {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent; /* Adjusted for narrower head */
+            border-right: 15px solid transparent; /* Adjusted for narrower head */
+            border-bottom: 30px solid gold; /* Adjusted proportionally */
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+        }
+
+        .arrow-body {
+            position: absolute;
+            top: 30px; /* Adjusted top to align with narrower head */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px; /* Made the arrow body narrower */
+            height: 160px; /* Adjusted height proportionally */
+            background: linear-gradient(to right, #c9a218, gold, #c9a218);
+            border-radius: 2px;
+            filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+        }
+
+        /* Hide the foreground quote */
+        .quote-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-text-container">
+        <div class="background-text">
+            <span class="sanskrit">"चापस्य शक्तिः बाणे, मनसः शक्तिः ध्येयज्ञाने।"</span>
+            <span class="english">"The power of a bow lies in the arrow, the power of the mind lies in knowing its aim."</span>
+        </div>
+    </div>
+
+    <div class="arrow-container">
+        <div class="arrow">
+            <div class="arrow-head"></div>
+            <div class="arrow-body"></div>
+        </div>
+    </div>
+
+    <div class="quote-container">
+        <div class="sanskrit-quote">
+            " चापस्य शक्तिः बाणे, मनसः शक्तिः ध्येयज्ञाने।"
+        </div>
+        <div class="english-translation">
+            "The power of a bow lies in the arrow, the power of the mind lies in knowing its aim."
+        </div>
+    </div>
+
+    <script>
+        const redirectURL = "home.html";
+        const fadeOutDuration = 1000; // Duration of the intro fade-out in milliseconds
+
+        
+        // Set the total duration the animation (quote and arrow) should be visible
+        const animationVisibleDuration = 10000; // 8 seconds
+
+        setTimeout(() => {
+            // Fade out the intro animation elements
+            document.querySelector('.background-text-container').style.opacity = 0;
+            document.querySelector('.arrow-container').style.opacity = 0;
+            document.body.style.transition = `opacity ${fadeOutDuration}ms ease-in-out`;
+            document.body.style.opacity = 0;
+
+            sessionStorage.setItem('fromIntroAnimation', 'true');
+
+            // Redirect after the fade-out
+            setTimeout(() => {
+                window.location.href = redirectURL;
+            }, fadeOutDuration);
+
+        }, animationVisibleDuration); // Start fade-out after 8 seconds
+    </script>
+</body>
+</html>
