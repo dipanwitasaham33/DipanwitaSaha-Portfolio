@@ -147,7 +147,7 @@ const certificates = [
       date: "March 2025",
       thumbnail: "sql.jpg",
       fullImage: "sql.jpg",
-      credentialUrl: "https://example.com/credential/24680"
+      credentialUrl: "https://www.hackerrank.com/certificates/f314fa2417b4"
   },
   {
       id: 4,
