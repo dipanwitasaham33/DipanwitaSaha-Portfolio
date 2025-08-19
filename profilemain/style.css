@@ -550,7 +550,10 @@ h3{
 .about-btn button:hover{
     background: var(--first-color-hover);
 }
-
+.about-btn .btn a{
+    text-decoration: none;
+    color:rgb(244, 234, 234);
+}
 
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
@@ -1787,3 +1790,4 @@ button:hover {
         flex-direction: column;
     }
 }
+
